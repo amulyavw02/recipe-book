@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+/* Base styles */
+body {
+    font-family: "Comic Neue", cursive;
+    margin: 20px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+}
+
+
+.container {
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    color: #0e0e0e;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+/* Index page specific styles */
+.index-page {
+    background-image: url('../images/hero-food.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Recipes page specific styles */
+/* Base styles */
+.recipes-page {
+    font-family: "Comic Neue", cursive;
+    font-weight: 400;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/kitchen.jpg') no-repeat center center/cover;
+}
+
+
+#flipbook {
+    width: 800px;
+    height: 300px;
+    /* box-shadow: 10px 0 45px rgba(0, 0, 0, 0.6); */
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    transform-origin: left center;
+}
+
+#flipbook .page{
+    background: url('../images/page_bg.png');
+    border: 1px solid #dedede;
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#flipbook .hard{
+    background: url('../images/hard_cover.png');
+    color: #000000;
+    text-align: center;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-size: 100% 100%;
+}
+#flipbook #front_cover{
+    background: url('../images/book_cover.png') no-repeat center center/cover;
+    background-size: 100% 100%;
+}
+#flipbook #back_cover{
+    background: url('../images/back_cover.png') no-repeat center center/cover;
+    background-size: 100% 100%;
+}
+.page{
+    box-shadow: none;
+
+}
+.content_size{
+    width: 50px;
+}
+.nav-btn {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 24px;
+    z-index: 100;
+    transition: background 0.3s ease;
+}
+
+.nav-btn:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+#prev-btn {
+    left: 20px;
+}
+
+#next-btn {
+    right: 20px;
+}
+
+.page {
+    background-color: #fff8dc;
+    padding: 15px;
+    font-family: 'Comic Neue', cursive;
+    color: #121212;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Contents page styling */
+.page h2 {
+    text-align: center;
+    color: #121212;
+    font-size: 1.2em;
+    margin: 10px 0;
+    font-weight: 800;
+}
+
+.page ol {
+    list-style-type: none;
+    counter-reset: recipe-counter;
+    padding-left: 20px;
+}
+
+.page ol li {
+    counter-increment: recipe-counter;
+    margin-bottom: 15px;
+    font-size: 1em;
+    color: #121212;
+}
+
+.page ol li::before {
+    content: counter(recipe-counter) ". ";
+    color: #121212;
+    font-weight: bold;
+}
+
+/* Recipe page styling */
+
+.page img {
+    width: 85%;
+    height: auto;
+    max-height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+    margin: 10px auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Container styling */
+
+/* Recipe headings */
+.page h3 {
+    color: #202020;
+    margin: 15px 0 10px;
+    font-size: 1.1em;
+    border-bottom: 2px solid #c73e08;
+    padding-bottom: 3px;
+    font-weight: 700;
+}
+
+/* Ingredients list */
+.page ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.page ul li {
+    margin: 10px 0;
+    padding-left: 20px;
+    position: relative;
+}
+
+.page ul li::before {
+    content: "•";
+    color: #121212;
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+/* Instructions list */
+.page ol {
+    padding-left: 20px;
+}
+
+.page ol li {
+    margin: 15px 0;
+    line-height: 1.25;
+    color: #121212;
+}
+
+
+/* Responsive styles */
+
+
+/* Responsive styles */
+@media (min-width: 768px) {
+    #flipbook {
+        width: 600px;
+        height: 450px;
+    }
+    .nav-btn {
+        padding: 15px 20px;
+        font-size: 24px;
+    }
+    .page h2 {
+        font-size: 1.5em;
+    }
+    
+    .page img {
+        width: 90%;
+        max-height: 350px;
+    }
+    
+    .page li {
+        font-size: 1em;
+        line-height: 1.4;
+    }
+}
+
+/* Desktop and larger devices */
+@media (min-width: 1024px) {
+    #flipbook {
+        width: 1200px;
+        height: 800px;
+    }
+    
+    body {
+        font-size: 18px;
+    }
+    .page img {
+        width: 80%;
+        max-height: 450px;
+        transition: transform 0.3s ease;
+    }
+    
+    .page img:hover {
+        transform: scale(1.02);
+    }
+}

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Recipe Book</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="recipes-page">
+    <button id="prev-btn" class="nav-btn">
+        <span>←</span>
+    </button>
+    <!-- Add these divs for hero text -->
+<!-- <div class="hero-text left-text">
+    <h2>Welcome to</h2>
+    <h1>My Recipe Book</h1>
+    <p>Start your culinary journey</p>
+</div>
+
+<div class="hero-text right-text">
+    <h2>Thanks for reading</h2>
+    <h1>Happy Cooking!</h1>
+    <p>Hope you enjoyed the recipes</p>
+</div> -->
+    <div id="flipbook">
+        <!-- Front Cover -->
+        <div class="hard" id="front_cover">
+        </div>
+        <div class="hard"></div>
+
+        <!-- Contents Page -->
+        <div class="page">
+            <h2>Contents</h2>
+            <ol>
+                <li>Kidney Bean Salad with Cream of Mushroom on side</li>
+                <li>Aglio e Olio</li>
+                <li>Spinach rice with yogurt curry</li>
+                <li>Thai curry with rice</li>
+                <li>Chocolate Mug Cake</li>
+            </ol>
+        </div>
+
+        <!-- Recipe 1: Rajma with mushroom cream -->
+        <div class="page">
+            <img src="images/Rajma.JPG" alt="Rajma salad with cream of mushroom">
+        </div>
+        <div class="page">
+            <h2>Kidney Bean Salad with Cream of Mushroom on side</h2>
+            <h3>Ingredients:</h3>
+            <ul>
+                <li>Kidney beans - 2 cups, cooked</li>
+                <li>Onions, carrots, peppers - diced</li>
+                <li>Cream sauce - 1 cup</li>
+                <li>Basic spices</li>
+                <li>Cream of mushroom</li>
+            </ul>
+            <h3>Instructions:</h3>
+            <ol>
+                <li>Sauté vegetables until soft</li>
+                <li>Add beans and cream sauce</li>
+                <li>Simmer for 10 minutes</li>
+                <li>Season and serve hot</li>
+            </ol>
+        </div>
+
+        <!-- Recipe 2: Aglio e olio -->
+        <div class="page">
+            <img src="images/Aglio.JPG" alt="Aglio e Olio">
+        </div>
+        <div class="page">
+                <h2>Aglio e Olio</h2>
+                <h3>Ingredients:</h3>
+                <ul>
+                    <li>Spaghetti - 250g</li>
+                    <li>Garlic - 6 cloves, sliced and Red chili flakes - 1 tsp</li>
+                    <li>Parsley - 2 tbsp, chopped and Salt and pepper to taste</li>
+                </ul>
+                <h3>Instructions:</h3>
+                <ol>
+                    <li>Cook spaghetti in salted water until al dente. Reserve 1 cup of pasta water before draining.</li>
+                    <li>Sauté garlic in olive oil until golden</li>
+                    <li>Add chili flakes and cooked pasta</li>
+                    <li>Toss with parsley, salt, and pepper</li>
+                </ol>
+        </div>
+
+        <!-- Recipe 3: Spinach rice -->
+        <div class="page">
+            <img src="images/spinach.jpg" alt="Spinach rice">
+        </div>
+        <div class="page">
+            <h2>Spinach rice with yogurt curry</h2>
+            <h3>Ingredients:</h3>
+            <ul>
+                <li>Green spinach paste</li>
+                <li>Yogurt with masalas and spices</li>
+                <li>2 cloves garlic and onions, minced</li>
+                <li>1 cup rice</li>
+            </ul>
+            <h3>Instructions:</h3>
+            <ol>
+                <li>Cook rice with added green color</li>
+                <li>Simmer curry paste with yogurt</li>
+                <li>Stir in chili powder, cumin, and tomato sauce. Simmer for 10 minutes.</li>
+                <li>Serve curry around green rice</li>
+            </ol>
+        </div>
+
+        <!-- Recipe 4: Thai curry -->
+        <div class="page">
+            <img src="images/Thai.JPG" alt="Thai curry with rice">
+        </div>
+        <div class="page">
+            <h2>Thai curry with rice</h2>
+            <h3>Ingredients:</h3>
+            <ul>
+                <li>Green curry paste - 2 tbsp</li>
+                <li>Coconut milk - 1 can</li>
+                <li>1 carrot, julienned</li>
+                <li>Mixed vegetables</li>
+                <li>Rice - 2 cups</li>
+            </ul>
+            <h3>Instructions:</h3>
+            <ol>
+                <li>Cook rice</li>
+                <li>Simmer curry paste with coconut milk</li>
+                <li>Add vegetables and cook</li>
+                <li>Serve green curry with rice</li>
+            </ol>
+        </div>
+
+        <!-- Recipe 5: Chocolate Mug Cake -->
+        <div class="page">
+            <img src="images/mugcake.jpg" alt="Chocolate Mug Cake">
+        </div>
+        <div class="page">
+            <h2>Chocolate Mug Cake</h2>
+            <h3>Ingredients:</h3>
+            <ul>
+                <li>4 tbsp all-purpose flour</li>
+                <li>4 tbsp sugar</li>
+                <li>2 tbsp cocoa powder</li>
+                <li>1 egg</li>
+                <li>1/4 tsp vanilla extract</li>
+            </ul>
+            <h3>Instructions:</h3>
+            <ol>
+                <li>In a microwave-safe mug, mix flour, sugar, and cocoa powder.</li>
+                <li>Add egg and mix well. Stir in milk, oil, and vanilla extract.</li>
+                <li>Microwave on high for 1-2 minutes, or until the cake is cooked through.</li>
+            </ol>
+        </div>
+
+        <!-- Back Cover -->
+        <div class="hard" id="back_cover">
+        </div>
+    </div>
+    <button id="next-btn" class="nav-btn">
+        <span>→</span>
+    </button>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/turn.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
